@@ -1,10 +1,10 @@
 {
-	"name": "newpipeline",
+	"name": "pl_datacopy",
 	"properties": {
 		"description": "New first pipe line",
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Data copy",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -50,23 +50,23 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "ds_adls_parametarized",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText2",
+						"referenceName": "ds_adls_parametarized",
 						"type": "DatasetReference"
 					}
 				]
 			},
 			{
-				"name": "Copy data1_copy1",
+				"name": "Data copy archive",
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Copy data1",
+						"activity": "Data copy",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -115,18 +115,35 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "ds_adls_parametarized",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText3",
+						"referenceName": "ds_adls_parametarized",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
+		"parameters": {
+			"input_folder": {
+				"type": "string"
+			},
+			"input_file": {
+				"type": "string"
+			},
+			"output_folder": {
+				"type": "string"
+			},
+			"output_file": {
+				"type": "string"
+			},
+			"archive_folder": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
