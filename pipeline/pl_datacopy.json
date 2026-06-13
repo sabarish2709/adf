@@ -129,19 +129,28 @@
 		],
 		"parameters": {
 			"input_folder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "input"
 			},
 			"input_file": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTProduct.txt"
 			},
 			"output_folder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "output"
 			},
 			"output_file": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTProduct.txt"
 			},
 			"archive_folder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "archive"
+			},
+			"archive_file": {
+				"type": "string",
+				"defaultValue": "SalesLTProduct.txt"
 			}
 		},
 		"annotations": []
