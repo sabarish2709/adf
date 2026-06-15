@@ -36,6 +36,32 @@
 									"type": "Expression"
 								}
 							}
+						},
+						{
+							"name": "Execute Pipeline1",
+							"type": "ExecutePipeline",
+							"dependsOn": [],
+							"policy": {
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "pl_datacopy",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"input_folder": "input",
+									"input_file": {
+										"value": "@item().name",
+										"type": "Expression"
+									},
+									"output_folder": "output",
+									"output_file": "@item().name",
+									"archive_folder": "archive"
+								}
+							}
 						}
 					]
 				}

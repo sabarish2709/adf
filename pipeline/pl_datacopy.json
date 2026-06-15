@@ -147,10 +147,6 @@
 			"archive_folder": {
 				"type": "string",
 				"defaultValue": "archive"
-			},
-			"archive_file": {
-				"type": "string",
-				"defaultValue": "SalesLTProduct.txt"
 			}
 		},
 		"annotations": []
