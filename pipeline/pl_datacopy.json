@@ -51,13 +51,33 @@
 				"inputs": [
 					{
 						"referenceName": "ds_adls_parametarized",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"folder_name": {
+								"value": "@pipeline().parameters.input_folder",
+								"type": "Expression"
+							},
+							"file_name": {
+								"value": "@pipeline().parameters.input_file",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "ds_adls_parametarized",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"folder_name": {
+								"value": "@pipeline().parameters.output_folder",
+								"type": "Expression"
+							},
+							"file_name": {
+								"value": "@pipeline().parameters.output_file",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
@@ -116,13 +136,33 @@
 				"inputs": [
 					{
 						"referenceName": "ds_adls_parametarized",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"folder_name": {
+								"value": "@pipeline().parameters.output_folder",
+								"type": "Expression"
+							},
+							"file_name": {
+								"value": "@pipeline().parameters.output_file",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "ds_adls_parametarized",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"folder_name": {
+								"value": "@pipeline().parameters.archive_folder",
+								"type": "Expression"
+							},
+							"file_name": {
+								"value": "@pipeline().parameters.output_file",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
