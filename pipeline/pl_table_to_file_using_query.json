@@ -1,9 +1,9 @@
 {
-	"name": "TabletoFilepipeline",
+	"name": "pl_table_to_file_using_query",
 	"properties": {
 		"activities": [
 			{
-				"name": "tabletofile",
+				"name": "table_to_file_using_query",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -17,6 +17,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "'SELECT TOP (1000) * FROM[' schema  '].['  table   ']'",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -43,7 +47,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "ds_table_to_file_using_query",
 						"type": "DatasetReference"
 					}
 				],
@@ -55,6 +59,15 @@
 				]
 			}
 		],
+		"parameters": {
+			"schema": {
+				"type": "String",
+				"defaultValue": "SalesLT"
+			},
+			"Table": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }

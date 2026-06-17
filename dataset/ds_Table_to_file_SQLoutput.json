@@ -1,5 +1,5 @@
 {
-	"name": "TabletofileSQLOutput",
+	"name": "ds_Table_to_file_SQLoutput",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
