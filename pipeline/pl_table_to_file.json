@@ -1,9 +1,9 @@
 {
-	"name": "TabletoFilepipeline",
+	"name": "pl_table_to_file",
 	"properties": {
 		"activities": [
 			{
-				"name": "pl_table_to_file",
+				"name": "table_to_file",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
