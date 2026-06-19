@@ -64,7 +64,7 @@
 				]
 			},
 			{
-				"name": "Data flow1",
+				"name": "GenerateJSONFILE",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
