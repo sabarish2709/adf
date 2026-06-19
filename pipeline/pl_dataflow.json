@@ -56,7 +56,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_archive_csv",
+						"referenceName": "ds_target_archive_csv",
 						"type": "DatasetReference"
 					}
 				]
