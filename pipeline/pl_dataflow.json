@@ -6,6 +6,8 @@
 			{
 				"name": "Convert_file_to_csv_only",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
