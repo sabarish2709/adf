@@ -1,5 +1,5 @@
 {
-	"name": "pl_metaData_filter_2",
+	"name": "filter_csv",
 	"properties": {
 		"activities": [
 			{
@@ -37,7 +37,7 @@
 				}
 			},
 			{
-				"name": "Filter1",
+				"name": "filter_csv",
 				"type": "Filter",
 				"dependsOn": [
 					{
@@ -55,6 +55,25 @@
 					},
 					"condition": {
 						"value": "@endswith(item().name,'csv')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "filter_csv",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('filter_csv').output.value",
 						"type": "Expression"
 					}
 				}
