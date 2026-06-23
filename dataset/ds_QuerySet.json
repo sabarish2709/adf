@@ -1,0 +1,12 @@
+{
+	"name": "ds_QuerySet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ds_AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
