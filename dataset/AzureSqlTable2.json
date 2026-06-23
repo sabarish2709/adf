@@ -1,0 +1,37 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ds_AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SourceTable",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Query",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TargetTable",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TargetDirectory",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "SalesLT",
+			"table": "Config"
+		}
+	}
+}
