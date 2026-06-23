@@ -1,0 +1,45 @@
+{
+	"name": "ConfigData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ConfigData.csv",
+				"folderPath": "ConfigDirectory",
+				"fileSystem": "container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "1",
+				"type": "String"
+			},
+			{
+				"name": "Product1",
+				"type": "String"
+			},
+			{
+				"name": "select * from [SalesLT].[Product]",
+				"type": "String"
+			},
+			{
+				"name": "Product3",
+				"type": "String"
+			},
+			{
+				"name": "Volume/project2/output/",
+				"type": "String"
+			}
+		]
+	}
+}
