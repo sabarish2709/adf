@@ -28,7 +28,6 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "CREATE TABLE [SalesLT].[Config]\n(\n    Id INT NOT NULL PRIMARY KEY,\n    SourceDirectory NVARCHAR(100) NULL,\n    Query NVARCHAR(100) NULL,\n    TargetTable NVARCHAR(100) NULL,\n    TargetDirectory NVARCHAR(100) NULL\n    \n)",
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false,
 						"tableOption": "autoCreate",
