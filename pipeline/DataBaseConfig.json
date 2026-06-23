@@ -1,0 +1,36 @@
+{
+	"name": "DataBaseConfig",
+	"properties": {
+		"activities": [
+			{
+				"name": "TableCreation",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "CREATE TABLE [SalesLT].[Config]\n(\n    Id INT NOT NULL PRIMARY KEY,\n    SourceDirectory NVARCHAR(100) NULL,\n    Query NVARCHAR(100) NULL,\n    TargetTable NVARCHAR(100) NULL,\n    TargetDirectory NVARCHAR(100) NULL\n    \n)",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureSqlTableConfig",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
