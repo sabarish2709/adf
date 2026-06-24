@@ -180,7 +180,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@item()",
+						"value": "@contains(item().Query,'Product')",
 						"type": "Expression"
 					}
 				}
