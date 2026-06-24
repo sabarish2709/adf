@@ -1,0 +1,12 @@
+{
+	"name": "ds_dynamic_query_run",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ds_AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
