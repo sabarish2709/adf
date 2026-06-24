@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "archivesqloutputfile",
-				"container": "project2"
+				"folderPath": "Output",
+				"container": "container"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

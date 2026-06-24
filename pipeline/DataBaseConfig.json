@@ -115,11 +115,9 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
-						"activity": "Filter1",
+						"activity": "FilterRequiredData",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -144,7 +142,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "@activity('GetDataFromConfigTable').output.value",
+										"value": "@activity('FilterRequiredData').output.value[0].Query",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -163,7 +161,7 @@
 				}
 			},
 			{
-				"name": "Filter1",
+				"name": "FilterRequiredData",
 				"type": "Filter",
 				"dependsOn": [
 					{
