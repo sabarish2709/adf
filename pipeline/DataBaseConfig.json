@@ -125,6 +125,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('FilterRequiredData').output.value",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Run_Query_And_Copy_Data",
