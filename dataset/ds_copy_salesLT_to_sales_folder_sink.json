@@ -1,5 +1,5 @@
 {
-	"name": "ds_salesLT_to_sales_folder_source",
+	"name": "ds_copy_salesLT_to_sales_folder_sink",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "input/AdventureWorksLTDEPOC.zip/AdventureWorksLTDEPOC",
 				"fileSystem": "pocproject"
 			},
 			"columnDelimiter": ",",
