@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "ZipFIleProcess",
+				"name": "ZipFIleExtractProcess",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -68,7 +68,7 @@
 				"type": "GetMetadata",
 				"dependsOn": [
 					{
-						"activity": "ZipFIleProcess",
+						"activity": "ZipFIleExtractProcess",
 						"dependencyConditions": [
 							"Succeeded"
 						]
