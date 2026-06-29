@@ -100,6 +100,29 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
+			},
+			{
+				"name": "FilterRequiredData",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "inputFolderData",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('inputFolderData').output.childItems",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@or(and(startswith(item().name,'SalesLT'),endswith(item().name,'txt')),and(and(not(contains(item().name, '.json')),\n    not(contains(item().name, '.xml'))),not(contains(item().name, '.png')))) ",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
