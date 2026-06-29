@@ -272,8 +272,8 @@
 										]
 									},
 									{
-										"name": "Copy-audit-data",
-										"type": "Copy",
+										"name": "Script1",
+										"type": "Script",
 										"dependsOn": [],
 										"policy": {
 											"timeout": "0.12:00:00",
@@ -283,20 +283,22 @@
 											"secureInput": false
 										},
 										"userProperties": [],
-										"typeProperties": {
-											"source": {
-												"type": "AzureSqlSource",
-												"queryTimeout": "02:00:00",
-												"partitionOption": "None"
-											},
-											"enableStaging": false
+										"linkedServiceName": {
+											"referenceName": "ds_AzureSqlDatabase1",
+											"type": "LinkedServiceReference"
 										},
-										"inputs": [
-											{
-												"referenceName": "ds_auditTable",
-												"type": "DatasetReference"
-											}
-										]
+										"typeProperties": {
+											"scripts": [
+												{
+													"type": "Query",
+													"text": {
+														"value": "@concat('insert into SalesLT.Audit (filename,LoadTime,Status) values(''',item().name,''',GETDATE(),''Success'')')",
+														"type": "Expression"
+													}
+												}
+											],
+											"scriptBlockExecutionTimeout": "02:00:00"
+										}
 									}
 								]
 							}
