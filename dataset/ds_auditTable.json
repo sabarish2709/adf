@@ -1,0 +1,16 @@
+{
+	"name": "ds_auditTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ds_AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SalesLT",
+			"table": "Audit"
+		}
+	}
+}
